@@ -19,7 +19,12 @@ a:hover {
     color: #00a74f;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Muli', sans-serif;
     font-weight: normal;
 }
@@ -67,7 +72,8 @@ ol {
     padding: 4px 10px;
 }
 
-#header ul.menu li.selected a, #header ul.menu li.selected a:hover {
+#header ul.menu li.selected a,
+#header ul.menu li.selected a:hover {
     color: #1b6d32;
     font-weight: bold;
 }
@@ -106,7 +112,8 @@ label {
     margin-bottom: 4px;
 }
 
-input, textarea {
+input,
+textarea {
     clear: both;
     float: left;
     margin: 0 0 10px;
@@ -116,7 +123,8 @@ input, textarea {
     font-size: 14px;
 }
 
-input[type=submit], a.button {
+input[type=submit],
+a.button {
     font-weight: bold;
     background: #12c064;
     color: #fff;
@@ -237,7 +245,8 @@ ul.messages li a.close {
 
 /* images */
 
-.image-preview, .image-detail {
+.image-preview,
+.image-detail {
     max-width: 300px;
     float: left;
     margin: 0 20px 20px 0;
@@ -260,7 +269,8 @@ ul.messages li a.close {
     margin: 20px 10px 0;
 }
 
-a.like, a.follow {
+a.like,
+a.follow {
     float: right;
     margin-top: -8px;
 }
