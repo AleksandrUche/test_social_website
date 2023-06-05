@@ -1,19 +1,40 @@
 {% load static %}
 <html>
+
 <head>
-    <title>
-        {% block title %}
-        {% endblock %}
-    </title>
+    <title>{% block title %}{% endblock %}</title>
     <link href="{% static 'css\base.css' %}" rel="stylesheet">
 </head>
+
 <body>
-<div id="header">
-    <span class="logo">Сайт</span>
-</div>
-<div id="content">
-    {% block content %}
-    {% endblock %}
-</div>
+    <div id="header">
+        <span class="logo">Сайт</span>
+        {% if request.user.is_authenticated %}
+        <ul class="menu">
+            <li>
+                <a href="{% url 'dashboard' %}">Панель</a>
+            </li>
+            <li>
+                <a href="#">Фото</a>
+            </li>
+            <li>
+                <a href="#">Люди</a>
+            </li>
+        </ul>
+        {% endif %}
+        <span class="user">
+            {% if request.user.is_authenticated %}
+            Привет {{ request.user.first_name|default:request.user.username }},
+            <a href="{% url 'logout' %}">Выход</a>
+            {% else %}
+            <a href="{% url 'login' %}">Авторизоваться</a>
+            {% endif %}
+        </span>
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
+
 </html>
