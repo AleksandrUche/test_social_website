@@ -1,8 +1,4 @@
 from django.contrib.auth.models import User
-<<<<<<< HEAD
-from account.models import Profile
-=======
->>>>>>> origin/master
 
 
 class EmailAuthBackend:
